@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SECURITY TRAINING LAB - DO NOT USE REAL DATA</title>
+    <style>
+        body { 
+            font-family: monospace; 
+            background: #000; 
+            color: #0f0; 
+            padding: 20px;
+        }
+        .warning {
+            background: #ff0000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .dummy-form {
+            border: 2px solid #0f0;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #000;
+            color: #0f0;
+            border: 1px solid #0f0;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        ⚠️ THIS IS A SECURITY TRAINING ENVIRONMENT ⚠️<br>
+        DO NOT ENTER REAL CREDIT CARD INFORMATION<br>
+        Use test data only: 4111-1111-1111-1111 | Exp: 12/25 | CVV: 123
+    </div>
+    
+    <div class="dummy-form">
+        <h2>[SIMULATED NETFLIX PHISHING PAGE - TRAINING USE ONLY]</h2>
+        <form onsubmit="event.preventDefault(); alert('[TRAINING] This would capture credentials in a real attack');">
+            <input type="email" placeholder="Email Address (use test@example.com)" value="test@example.com">
+            <input type="password" placeholder="Password (use test123)" value="test123">
+            <input type="text" placeholder="Credit Card Number (use 4111111111111111)" value="4111111111111111">
+            <input type="text" placeholder="MM/YY (use 12/25)" value="12/25">
+            <input type="text" placeholder="CVV (use 123)" value="123">
+            <button type="submit">[SIMULATED SUBMIT]</button>
+        </form>
+        <p style="font-size: 12px; margin-top: 20px;">
+            This is a controlled lab exercise. No data is actually captured.<br>
+            For educational purposes only.
+        </p>
+    </div>
+    
+    <script>
+        console.log("[TRAINING] This demonstrates how phishing pages capture data");
+        console.log("[TRAINING] In a real attack, credentials would be sent to attacker's server");
+        console.log("[TRAINING] Use Gophish or SET for legitimate phishing simulations");
+    </script>
+</body>
+</html>
